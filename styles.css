@@ -1,0 +1,493 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: #fff;
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    background-color: rgba(255, 252, 252, 0.95);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+nav .logo {
+    font-size: 50px;
+    font-weight: bold;
+    color: #8a1f1f;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-links a {
+    font-size: 50px;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #3d2b2b;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9e1818;
+}
+
+/* Carousel */
+.carousel-item {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.carousel-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.carousel-caption {
+    bottom: 50%;
+    transform: translateY(50%);
+    text-align: left;
+    z-index: 2;
+    padding: 20px;
+    color: #FFF;
+}
+
+.carousel-caption h1 {
+    font-size: 4.5rem;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFF;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.carousel-caption p {
+    font-size: 2.8rem;
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+    .carousel-caption p {
+        font-size: 1.1rem;
+    }
+    .carousel-caption {
+        text-align: center;
+        bottom: 40%;
+    }
+}
+
+
+.servicio-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    padding: 80px 20px;
+    margin: 0;
+ 
+    background: #c11212;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.servicio-desc {
+   background-color: #000000;
+    width: 800px;
+    min-height: 1000px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    padding: 25px 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.servicio-desc:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgb(241, 209, 30);
+}
+
+.servicio-desc img {
+    width: 200px;          
+    height: 200px;
+    object-fit: contain;  
+    display: block;
+    margin: 0 auto 20px auto; 
+}
+
+.servicio-desc h3 {
+   margin-top: 15px; 
+   font-size: 3.8rem;
+   color: #ffd700;
+   text-align: center;
+}
+
+.servicio-desc p {
+    font-size: 3rem;
+    color: #ccc;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* SECCIÓN PRESENTACIÓN */
+
+.presentacion {
+    padding: 120px 20px;
+    background-image: url("imagen/gym2.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.cuadro-presentacion {
+    background-color: rgba(0, 0, 0, 0.92);   
+    box-shadow: 0 25px 60px rgba(0,0,0,0.8);
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 2200px;
+    margin: 0 auto;
+    min-height: 680px;                      
+}
+
+.cuadro-presentacion img {
+    width: 50%;                             
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.contenidocuadro {
+    padding: 80px 70px;                      
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.contenidocuadro h2 {
+    font-size: 5.5rem;                    
+    font-weight: 900;
+    color: #ffd700;
+    line-height: 1.05;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+}
+
+
+.contenidocuadro p {
+    font-size: 3.05rem;                  
+    color: #eeeeee;
+    line-height: 1.55;
+    margin-bottom: 45px;
+}
+
+
+.btnMapa {
+    display: inline-block;
+    padding: 22px 55px;
+    background-color: #b8843b;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 2.3rem;                       
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: all 0.4s ease;
+    align-self: flex-start;
+}
+
+.btnMapa:hover {
+    background-color: #ffd700;
+    color: #000;
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+}
+@media (max-width: 992px) {
+    .cuadro-presentacion {
+        flex-direction: column;          
+    }
+    
+    .cuadro-presentacion img {
+        width: 100%;
+        height: 380px;
+    }
+    
+    .contenidocuadro {
+        padding: 60px 40px;
+    }
+    
+    .contenidocuadro h2 {
+        font-size: 4.2rem;
+    }
+    
+    .contenidocuadro p {
+        font-size: 1.85rem;
+    }
+    
+    .btnMapa {
+        font-size: 2.1rem;
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contenidocuadro h2 {
+        font-size: 3.5rem;
+    }
+    .contenidocuadro p {
+        font-size: 1.65rem;
+    }
+    .btnMapa {
+        font-size: 1.9rem;
+    }
+}
+
+
+/* Planes de Precios */
+.seccion-precio {
+    padding: 80px 20px;
+    background: rgba(15, 32, 39, 0.95);
+   
+   
+}
+.seccion-precio::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center, rgba(184, 100, 43, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+.container-plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;                    
+    padding: 80px 20px;           
+    background: rgba(9, 8, 8, 0.3);    
+    margin: 0;      
+    border: 3px solid red
+}
+.container-plan h2 {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+    color: #ffd700;
+    margin-bottom: 80px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+
+}
+
+/* TARJETA PRINCIPAL*/
+.precio-card {
+    background: #0a0a0a;
+    border-radius: 20px;
+    padding: 50px 35px 45px;
+    
+    width: 800px;
+    min-height: 1000px;
+    border: 3px solid #ffd700;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.precio-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.4);
+    border-color: #ffea00;
+}
+
+.precio-card .plan-nombre {
+    font-size: 3rem;          
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+.plan-precio {
+    font-size: 7.2rem;           
+    font-weight: 900;
+    line-height: 0.9;
+    color: #ffd700;
+    margin: 10px 0 30px 0;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* Lista de beneficios */
+.precio-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 30px 0 50px 0;
+    flex-grow: 1;
+}
+
+.precio-card ul li {
+    padding: 19px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    font-size: 2.55rem;       
+    color: #f0f0f0;
+    line-height: 1.45;
+}
+
+.precio-card ul li::before {
+    content: '✔';
+    color: #ffd700;
+    font-size: 2rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.btn-unirse {
+    background: linear-gradient(45deg, #ffd700, #ffcc00);
+    color: #000000;
+    border: none;
+    padding: 22px 50px;
+    border-radius: 50px;
+    font-size: 1.35rem;     
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-top: auto;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+.btn-unirse:hover {
+    background: linear-gradient(45deg, #ffea00, #ffd700);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(255, 215, 0, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    .card-price {
+        font-size: 5.8rem;
+    }
+    .precio-card ul li {
+        font-size: 1.4rem;
+    }
+}
+
+
+
+
+/* ====================== FOOTER ====================== */
+.footer {
+    background: #0a0a0a;
+    color: #ddd;
+    padding: 80px 0 30px 0;
+    border-top: 4px solid #ffd700;
+}
+
+.footer-logo {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #ffd700;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.footer-title {
+    color: #ffd700;
+    font-size: 2.6rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 2.35rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffd700;
+}
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact li {
+    margin-bottom: 15px;
+    font-size: 2.35rem;
+}
+
+.footer-contact i {
+    color: #ffd700;
+    margin-right: 12px;
+    width: 20px;
+}
+
+.social-icons a {
+    color: #ddd;
+    font-size: 2.8rem;
+    margin-right: 20px;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffd700;
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #888;
+    font-size: 2.1rem;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 0 20px 0;
+    }
+    
+    .footer-logo {
+        font-size: 2.8rem;
+    }
+}
